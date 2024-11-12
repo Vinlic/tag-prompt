@@ -126,6 +126,7 @@ export default {
 
     prepareXMLContent(content) {
         const scripts: any = [];
+        content = content.trim();
         if(content.indexOf("<script>") !== -1) {
             const regExp = /<script>([\s\S]*?)<\/script>/gm;
             let match;
