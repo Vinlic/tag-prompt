@@ -10,11 +10,12 @@ $ npm install tag-prompt
 
 ## QuickStart
 
-![example](doc/example-1.png)
+![example](https://github.com/Vinlic/tag-prompt/blob/main/doc/example-1.png)
 
 ```javascript
 import { Template } from "tag-prompt";
 const template = Template.parse("...Tag Prompt...");
-template.render({ pretty: true });
+const result = template.render({ pretty: true });
+console.log(result);
 ```
 
