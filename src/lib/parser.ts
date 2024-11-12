@@ -16,10 +16,10 @@ export default {
         const { root, scripts } = this.parseToXMLDocument(value);
         let templateObject, datasetObject;
         for (let o of root.children) {
-            if (o.name === Template.type)
-                templateObject = o;
-            else if (o.name === "data")
+            if (o.name === "data")
                 datasetObject = o;
+            else if (o.name !== "script")
+                templateObject = o;
         }
         if (!templateObject)
             throw new Error("template tag not found");

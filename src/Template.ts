@@ -39,12 +39,12 @@ export default class Template extends Base {
     }
 
     render(options: IRenderOptions = {}) {
-        const tag = this.createRootTag(Template.type, this.optionsExport());
+        const tag = this.createRootTag(options.rootName || 'prompt', this.optionsExport());
         this.children?.forEach(node => node.render(undefined, tag));
         return tag.end({
             prettyPrint: options.pretty,
             headless: true
-        });
+        }) + (options.appendContent || "");
     }
 
     toBASE64(options?: IRenderOptions) {

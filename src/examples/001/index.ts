@@ -8,6 +8,7 @@ const content = fs.readFileSync(path.join(__dirname, "template.xml")).toString()
 const template = Template.parse(content);
 
 const result = template.render({
+    rootName: "user-input",
     pretty: true
 });
 

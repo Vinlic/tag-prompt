@@ -20,6 +20,9 @@ const template = Template.parse("<template>{{a + b}}</template>", {
       b: 2
     }
 });
-console.log(result);  // <template>3</template>
+console.log(template.render({
+    rootName: "user-input",
+    pretty: true
+}));  // <user-input>3</user-input>
 ```
 
