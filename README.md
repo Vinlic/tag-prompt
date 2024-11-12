@@ -14,8 +14,12 @@ $ npm install tag-prompt
 
 ```javascript
 import { Template } from "tag-prompt";
-const template = Template.parse('<template>{{1 + 1}}</template>');
-const result = template.render({ pretty: true });
-console.log(result);  // <template>2</template>
+const template = Template.parse("<template>{{a + b}}</template>", {
+    dataset: {
+      a: 1,
+      b: 2
+    }
+});
+console.log(result);  // <template>3</template>
 ```
 
