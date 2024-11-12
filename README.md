@@ -14,8 +14,8 @@ $ npm install tag-prompt
 
 ```javascript
 import { Template } from "tag-prompt";
-const template = Template.parse("...Tag Prompt...");
+const template = Template.parse('<template>{{1 + 1}}</template>');
 const result = template.render({ pretty: true });
-console.log(result);
+console.log(result);  // <template>2</template>
 ```
 
