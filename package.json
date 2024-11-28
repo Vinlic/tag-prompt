@@ -27,6 +27,10 @@
     "glm",
     "openai"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vinlic/tag-prompt.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/lodash": "4.14.182",
