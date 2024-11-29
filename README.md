@@ -78,7 +78,11 @@ const template = Template.parse(`
         ```
     </output-format>
 </template>
-`);
+`, {
+    dataset: {
+        ...
+    }
+});
 console.log(template.render());
 ```
 
@@ -133,7 +137,15 @@ const template = Template.parse(`
         ```
     </output-format>
 </template>
-`);
+`, {
+    dataset: {
+        data: [
+            { value: 'xxx' },
+            ...
+        ],
+        ...
+    }
+});
   
 ```
 
@@ -191,11 +203,15 @@ const template = Template.parse(`
     <my-custom-element>
         <nested-element>{{data}}</nested-element>
     </my-custom-element>
-    <another-element style="{{styles.main}}">
+    <another-element>
         {{computedValue}}
     </another-element>
 </template>
-`);
+`, {
+    dataset: {
+        ...
+    }
+});
 console.log(template.render());
 ```
 
@@ -203,7 +219,7 @@ console.log(template.render());
 
 ```typescript
 interface RenderOptions {
-    rootName?: string;  // Custom root element name (default: 'template')
+    rootName?: string;  // Custom root element name (default: 'prompt')
     pretty?: boolean;   // Enable pretty printing
 }
 ```
